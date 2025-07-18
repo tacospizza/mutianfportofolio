@@ -1,0 +1,94 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+.name-title {
+  font-size: 3em;
+  text-align: center;
+  margin-top: 20px;
+  background-color: #fefae0; /* putih tulang */
+  padding: 10px;
+  border-radius: 10px;
+}
+
+body.dark-mode .name-title {
+  background-color: #444444; /* abu gelap */
+}
+
+.navbar {
+  background-color: #fefae0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 2px solid #ccc;
+}
+
+body.dark-mode .navbar {
+  background-color: #4c1c1c;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  border: 1px solid #bbb;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #e0f0ff;
+}
+
+body.dark-mode .navbar li {
+  background-color: #800000;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#modeToggle {
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.content-box {
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #e0f7ff;
+}
+
+body.dark-mode .content-box {
+  background-color: #800000;
+  border-color: #cbb;
+}
+
+.carousel {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.carousel img, .project-slide img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}

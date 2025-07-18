@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mutia Portfolio</title>
+  <style>
+    :root {
+      --bg-light: #ffffff;
+      --bg-dark: #1c1c1c;
+      --text-light: #222222;
+      --text-dark: #f1f1f1;
+      --accent-light: #e6e6e6;
+      --accent-dark: #333333;
+      --box-light: #add8e6;
+      --box-dark: #800000;
+      --name-light: #000000; /* Hitam saat terang */
+      --name-dark: #ffffff;  /* Putih saat gelap */
+      --navbar-light: #add8e6;
+      --navbar-dark: #800000;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    .navbar {
+      background-color: var(--navbar-light);
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+      border-bottom: 2px solid #ccc;
+    }
+
+    .dark-mode .navbar {
+      background-color: var(--navbar-dark);
+    }
+
+    .navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar li {
+      border-right: 1px solid #444;
+      padding: 0 10px;
+    }
+
+    .navbar li:last-child {
+      border-right: none;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    #modeToggle {
+      margin-left: 20px;
+      padding: 5px 10px;
+    }
+
+    .name-title {
+      text-align: center;
+      font-size: 36px;
+      margin: 20px;
+      color: var(--name-light);
+    }
+
+    body.dark-mode .name-title {
+      color: var(--name-dark);
+    }
+
+    .hero-image {
+      text-align: center;
+      margin-top: -10px;
+    }
+
+    .hero-image img {
+      width: 200px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    .content-box {
+      background-color: var(--box-light);
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin: 20px;
+      padding: 20px;
+      transition: background-color 0.3s;
+    }
+
+    body.dark-mode .content-box {
+      background-color: var(--box-dark);
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+    }
+
+    .carousel img, .project-slide img {
+      height: 150px;
+      border-radius: 8px;
+    }
+
+    .project-slide {
+      min-width: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#summary">Summary</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills & Achievements</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+      <button id="modeToggle">Toggle Mode</button>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <h1 class="name-title">Hi,Im Mutia Nisa Fadillah</h1>
+    <div class="hero-image">
+      <img src="mutia.jpg" alt="Foto Mutia">
+    </div>
+  </section>
+
+  <main>
+    <section id="summary" class="content-box">
+      <h2>Summary</h2>
+      <p>Currently studying Systems Information at Universitas Persada Indonesia YAI as a 6th-semester student.
+         I have a strong passion for Information Technology and aspire to expand my knowledge and experience 
+         in this field through an internship program at your company.
+          With confidence, I believe that the combination of my educational background and deep interest in Information 
+          Technology will bring significant positive contributions to the company's growth. I am ready to continuously learn, 
+          develop, and work hard to achieve success together with the team. </p>
+    </section>
+
+    <section id="education" class="content-box">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>Persada Indonesia YAI University</strong> – Central Jakarta<br>Undergraduate in Information System 3.87/4.00<br>Sep 2022<br>Relevant Coursework: Web Programming, Object-Oriented Programing, Information Security, Business Intelligence, Algorithm Data Structure, Project Management, Software Engineering</li>
+        <li><strong>Vocation High School 2 Jakarta</strong> – Central Jakarta<br>Graduate in Accounting and Finance<br>2019-2022</li>
+      </ul>
+    </section>
+
+    <section id="experience" class="content-box">
+      <h2>Experience</h2>
+      <h3>Internship at the Makhkamah Agung</h3>
+      <ul>
+        <li>Reduced monthly expenses of the supply department.</li>
+        <li>Generated financial expenditure reports.</li>
+        <li>Drafted memorandums.</li>
+        <li>Help make copies of documents</li>
+      </ul>
+
+      <h3>Volunteer at YKAKI</h3>
+      <ul>
+        <li>Help direct the course of the event</li>
+        <li>Contribute to making games and yells for events</li>
+        <li>Conducted regular team meetings</li>
+      </ul>
+      <div class="carousel">
+        <img src="volunteer1.jpg" alt="Volunteer 1">
+        <img src="volunteer2.jpg" alt="Volunteer 2">
+        <img src="volunteer3.jpg" alt="Volunteer 3">
+      </div>
+    </section>
+
+    <section id="projects" class="content-box">
+      <h2>Projects</h2>
+      <h3>1.Developed and Designing a Prototype of the Digital Career
+        Portal 'Tunakarya' to Enhance Access to Job Vacancies and Online 
+        Training in Jakarta  (Mar 2025 - Jul 2025) </h3>
+        <p>Drs.Ahmad Rosadi.,M.KOM- At Persada YAI University,Central Jakarta </p>
+        <ul>
+            <li>Designing and Creating the Foundation of the website “Tuna Karya” </li>
+            <li>Creating the workflow interface and the use case diagram for website </li>
+            <li>Analyzing the existing problems and providing solutions </li>
+        </ul>
+        <h3>2.Prediction of Student Learning Achievement Using Data Mining   </h3>
+        <p>I Gede Agus Suwartane,S.KOM.,M .KOM - At Persada YAI University,Central Jakarta  </p>
+        <ul>
+            <li>To collect prepare performance data for analysis  </li>
+            <li>search and analyze student datasets for use in projects </li>
+            <li>To use Classification algorithms (e.g.,Decision Tree, Naïve Bayes, k-NN) </li>
+            <li>To interpret and visualize the results to support academic decision-making  </li>
+        </ul>
+    <h3>3.Developed a Website for Skincare and Makeup Recommendations </h3>
+        <p>At Persada YAI University,Central Jakarta  </p>
+        <ul>
+            <li>Coordinating Coolcap's monthly Profit and Loss   </li>
+            <li>Coordinating Stock for Coolcap manufacturing  </li>
+            <li>Coordinating Consumer Complaints & Feedback against Coolcap products  </li>
+        </ul>
+      <h3>4.Participation in the Merdeka Campus Program (PKMK)     </h3>
+        <p>Dian Gustina SKom,MMSI - At Persada YAI University,Central Jakarta  </p>
+        <ul>
+            <li>Coordinating Coolcap's monthly Profit and Loss   </li>
+            <li>Coordinating Stock for Coolcap manufacturing  </li>
+            <li>Coordinating Consumer Complaints & Feedback against Coolcap products  </li>
+        </ul>
+        <h3>5.Information Security Analysis for Website Users Using SQL Maps with SQL Injection method </h3>
+        <p>Ir. Essy Malays Sari Sakti. M.MSI-At Persada YAI University,Central Jakarta  </p>
+        <ul>
+            <li>Researched Analytical Tools.</li>
+            <li>Evaluated search, data rerieval, and journal accuracy.</li>
+            <li>Extracted key findings and methodologies for reports. </li>
+        </ul>
+        <h3>6.Developed a Library Website.</h3>
+        <p> DR. Sularso Budi Laksono, M.KOM. - At Persada YAI University,Central Jakarta  </p>
+        <p>Coordinator in the Object-Based Programming Course  </p>
+        <ul>
+            <li>Coordinated team members for library website project.</li>
+            <li>Developed detailed workflow diagrams for web processes.</li>
+            <li>Designed and developed the website. </li>
+            <li>Monitored system perfomance metrics,making adjustments to ensure optimal fuctionalityy and user experience.</li>
+        </ul>
+      <div class="carousel">
+        <div class="project-slide">
+          <img src="project1.jpg" alt="Project 1">
+          <p>Digital Career Portal 'Tunakarya'</p>
+        </div>
+        <div class="project-slide">
+          <img src="project2.png" alt="Project 2">
+          <p>Prediction of Student Learning Achievement Using Data Mining</p>
+        </div>
+        <div class="project-slide">
+          <img src="project3.png" alt="Project 3">
+          <p>Website for Skincare and Makeup Recommendations</p>
+        </div>
+        <div class="project-slide">
+          <img src="project4.jpg" alt="Project 4">
+          <p>Participation in the Merdeka Campus Program (PKMK)</p>
+        </div>
+        <div class="project-slide">
+          <img src="project5.png" alt="Project 5">
+          <p>Information Security Analysis for Website Users</p>
+        </div>
+        <div class="project-slide">
+          <img src="project6.png" alt="Project 6">
+          <p>Library Registration Website</p>
+        </div>
+        <div class="project-slide">
+          <img src="project7.png" alt="Project 7">
+          <p>Sales Data Visualization of PT Electronix</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="content-box">
+      <h2>Skills & Achievements</h2>
+      <ul>
+        <li><strong>Soft Skills:</strong> Analytical Thinking, Critical Thinking, Leadership, Teamwork, Problem Solving</li>
+        <li><strong>Hard Skills:</strong> HTML, SQL, CSS, JavaScript, Data Mining, Laravel, PHP</li>
+        <li><strong>Software Skills:</strong> MS Office, Power BI, VSCode, Figma, Framer, RapidMiner, SQL Maps, Kali Linux, Google Sheets, Canva</li>
+        <li><strong>Certifications:</strong> Google ADS, Snowflakes Cloud Data, BNSP Accounting, MC Volunteer YKAKI, Dicoding (JS, Web, Front-End, AI, Data Science, SQL, PM)</li>
+      </ul>
+    <section id="Certification Documentations" class="content-box">
+  <h2>Certification Documentations</h2>
+  <div class="certificates">
+    <img src="ser1.png" alt="certification1">
+    <img src="ser2.png" alt="certification2">
+    <img src="ser3.png" alt="certification3">
+    <img src="ser4.png" alt="certification4">
+    <img src="ser5.png" alt="certification5">
+    <img src="ser6.png" alt="certification6">
+    <img src="ser7.png" alt="certification7">
+    <img src="ser8.png" alt="certification8">
+    <img src="ser9.png" alt="certification9">
+    <img src="ser10.png" alt="certification10">
+  </div>
+</section>
+
+<style>
+  .certificates img {
+    width: 600px;       /* Ukuran seragam, bisa disesuaikan */
+    height: auto;       /* Agar proporsional */
+    display: block;     
+    margin: 20px auto;  /* Tengah + spasi antar gambar */
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+</style>
+
+      
+
+    <section id="contact" class="content-box">
+  <h2>Contact Us</h2>
+  <p>Phone: <a href="tel:08978758993">08978758993</a></p>
+  <p>Email: <a href="mailto:mutiat774@gmail.com">mutiat774@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/mutia-nisa-fadillah-b8535127b" target="_blank">mutia-nisa-fadillah</a></p>
+  <p>Drive Project: <a href="https://drive.google.com/drive/folders/1s5H5dtStTMXbd1mbsreqCL0SjZPip01J?usp=sharing" target="_blank">View on Google Drive</a></p>
+</section>
+
+  </main>
+
+  <script>
+    const toggleButton = document.getElementById('modeToggle');
+    const body = document.body;
+
+    // Load mode from localStorage
+    if (localStorage.getItem('mode') === 'dark') {
+      body.classList.add('dark-mode');
+    }
+
+    toggleButton.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      const mode = body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('mode', mode);
+    });
+  </script>
+</body>
+
+</html>
